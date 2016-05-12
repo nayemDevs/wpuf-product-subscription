@@ -36,20 +36,6 @@ License: GPL2
  */
 
 
-/*Save the value on the backend*/
-
-add_filter( 'job_manager_job_listing_data_fields', 'admin_add_salary_field' );
-
-function admin_add_salary_field( $fields ) {
-  $fields['_job_salary'] = array(
-    'label'       => __( 'Price ($)', 'job_manager' ),
-    'type'        => 'text',
-    'placeholder' => 'Inser your pirce',
-    'description' => ''
-  );
-  return $fields;
-}
-
 // wpuf meta box on the product area
 add_filter( 'woocommerce_product_data_tabs', 'add_my_custom_product_data_tab' );
 function add_my_custom_product_data_tab( $product_data_tabs ) {
