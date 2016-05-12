@@ -57,6 +57,7 @@ function add_my_custom_product_data_fields() {
     <p class="form-field product_field_type">
         <label for="product_field_type"><?php _e( 'WPUF Subscription Package', 'woocommerce' ); ?></label>
         <select id="product_field_type" name="subscription" data-placeholder="<?php _e( 'Search for a product&hellip;', 'woocommerce' ); ?>">
+            <?php echo '<option val="">--Select--</option>'?>
             <?php
             $sel_sub = get_post_meta( $post->ID, 'subscription', true );
             $subs = get_posts( array( 'post_type' => 'wpuf_subscription') );
